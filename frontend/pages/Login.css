@@ -1,0 +1,103 @@
+.login-container {
+    height: 100vh;
+    background: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.login-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.login-card h2 {
+    color: #6b6b60;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 320px;
+    padding: 18px 25px;
+    border: none;
+    border-radius: 40px;
+    background-color: #d8d5c8;
+    font-size: 22px;
+    outline: none;
+}
+
+.login-btn {
+    width: 180px;
+    padding: 15px;
+    border: none;
+    border-radius: 40px;
+    background-color: #d8d5c8;
+    color: #6b6b60;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    opacity: 0.9;
+}
+
+.forgot-password {
+    color: gray;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.logo-right {
+    position: absolute;
+    top: 80px;
+    right: 120px;
+    width: 120px;
+}
+
+.top-decoration,
+.bottom-decoration {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+}
+
+.top-decoration {
+    top: 80px;
+    left: 50px;
+}
+
+.bottom-decoration {
+    bottom: 80px;
+    right: 50px;
+}
+
+.line {
+    width: 18px;
+    height: 110px;
+    border-radius: 20px;
+    transform: rotate(-30deg);
+}
+
+.orange {
+    background: #f7931e;
+}
+
+.green {
+    background: #7ac943;
+}
+
+.blue {
+    background: #0071bc;
+}
+
+.pink {
+    background: #ec008c;
+}
+
+.purple {
+    background: #662d91;
+}
