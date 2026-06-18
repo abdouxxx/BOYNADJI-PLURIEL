@@ -36,8 +36,8 @@ function Login() {
       </div>
 
       <div className="logo-area">
-        <img src="/logo.jpeg" alt="Logo" className="logo-right" />
-        <span className="logo-name">Boynadji</span>
+        <img src="/logo.png" alt="Logo" className="logo-right" />
+        <span className="logo-name"></span>
       </div>
 
       <div className="login-card">
@@ -50,7 +50,7 @@ function Login() {
           <div className="field-wrap">
             <input
               type="text"
-              placeholder="Votre login"
+              placeholder="Username"
               className="input-field"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
