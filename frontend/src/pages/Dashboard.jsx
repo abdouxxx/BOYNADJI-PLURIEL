@@ -68,7 +68,13 @@ function Dashboard() {
                 <div className="sidebar-inner">
 
                     <div className="sidebar-logo">
-                        <div className="logo-circle">B</div>
+                        <div className="logo-circle">
+                            <img
+                        src="/logo.png"
+                        alt="logo"
+                        className="header-logo"
+                        onError={(e) => { e.target.style.display = 'none'; }}
+                    /></div>
                     </div>
 
                     <div className="sidebar-company">
@@ -95,14 +101,9 @@ function Dashboard() {
             <div className="main-content">
 
                 <div className="top-header">
-                    <img
-                        src="/logo.png"
-                        alt="logo"
-                        className="header-logo"
-                        onError={(e) => { e.target.style.display = 'none'; }}
-                    />
+
                     <div className="header-right">
-                        <span className="welcome-text">Tableau de bord</span>
+                        <span className="welcome-text">BIENVENUE</span>
                         <button
                             className="logout-btn"
                             onClick={handleLogout}

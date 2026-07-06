@@ -43,10 +43,10 @@
 }
 
 .logo-circle {
-    width: 64px;
-    height: 64px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
-    background: #C0392B;
+    background: white;
     color: white;
     font-family: 'Playfair Display', serif;
     font-size: 32px;
@@ -117,6 +117,7 @@
 
 .top-header {
     display: flex;
+    margin-left : 520px;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
@@ -137,7 +138,7 @@
 .welcome-text {
     font-size: 13px;
     font-weight: 500;
-    color: #888;
+    color: black;
     letter-spacing: 0.5px;
     text-transform: uppercase;
 }
