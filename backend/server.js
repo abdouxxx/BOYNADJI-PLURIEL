@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const authRoutes = require('./routes/auth');
+const vehicleRoutes = require("./routes/vehicleRoutes");
 
 const app = express();
 
@@ -25,6 +26,10 @@ mongoose.connect(process.env.MONGO_URI)
 });
 
 app.use('/api/auth', authRoutes);
+app.use(
+    "/api/vehicles",
+    vehicleRoutes
+);
 
 app.listen(process.env.PORT, () => {
 
