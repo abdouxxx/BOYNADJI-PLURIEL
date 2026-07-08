@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./transport.css";
+import {
+    FaCar,
+    FaUsers,
+    FaFileContract,
+    FaCalendarAlt,
+    FaSignOutAlt
+} from "react-icons/fa";
 
 function Transport() {
 
@@ -90,6 +97,10 @@ const filteredVehicles = vehicles.filter(
         console.error(error);
     }
 };
+const handleLogout = () => {
+        localStorage.removeItem("token");
+        navigate("/");
+    };
 const editVehicle = (vehicle) => {
 
     setEditingId(vehicle._id);
@@ -144,18 +155,35 @@ const deleteVehicle = async (id) => {
         <h2>TRANSPORT🚗</h2>
 
         <ul>
-            <li>🚗 Véhicules</li>
-            <li>👤 Clients</li>
-            <li>📄 Contrats</li>
-            <li>📅 Retours</li>
-        </ul>
+
+    <li className="active-menu">
+        <FaCar />
+        <span>Véhicules</span>
+    </li>
+
+    <li>
+        <FaUsers />
+        <span>Clients</span>
+    </li>
+
+    <li>
+        <FaFileContract />
+        <span>Contrats</span>
+    </li>
+
+    <li>
+        <FaCalendarAlt />
+        <span>Retours</span>
+    </li>
+
+</ul>
         <div className="logout-container">
 
     <button
         className="logout-btn"
-        onClick="merci au revoir"
-         >
-        🚪 Déconnexion
+        onClick={handleLogout}>
+        <FaSignOutAlt />
+        Déconnexion
     </button>
 
         </div>

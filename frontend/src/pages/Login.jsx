@@ -43,7 +43,7 @@ function Login() {
       <div className="login-card">
         <form onSubmit={handleLogin}>
 
-          <p className="card-title">Bienvenue à BOYNADJI PLURIEL</p>
+          <p className="card-title">Bienvenue à BACOUM HOLDING</p>
           <p className="card-sub">Connectez-vous à votre espace</p>
 
           <label className="field-label">Identifiant</label>
