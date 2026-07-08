@@ -78,8 +78,8 @@ function Dashboard() {
                     </div>
 
                     <div className="sidebar-company">
-                        <span className="company-name">BOYNADJI</span>
-                        <span className="company-tag">PLURIELS</span>
+                        <span className="company-name">BACOUM</span>
+                        <span className="company-tag">HOLDING</span>
                     </div>
 
                     <div className="sidebar-divider" />
@@ -117,13 +117,13 @@ function Dashboard() {
                 <div className="banner">
                     <div className="banner-track">
                         <span className="banner-icon">✦</span>
-                        Boynadji facilite la gestion des activités et services de la famille à travers une plateforme centralisée et accessible.
+                        BACOUM HOLDING facilite la gestion des activités et services de la famille à travers une plateforme centralisée et accessible.
                         <span className="banner-icon">✦</span>
-                        Boynadji facilite la gestion des activités et services de la famille à travers une plateforme centralisée et accessible.
+                        BACOUM HOLDING facilite la gestion des activités et services de la famille à travers une plateforme centralisée et accessible.
                         <span className="banner-icon">✦</span>
-                        Boynadji facilite la gestion des activités et services de la famille à travers une plateforme centralisée et accessible.
+                        BACOUM HOLDING facilite la gestion des activités et services de la famille à travers une plateforme centralisée et accessible.
                         <span className="banner-icon">✦</span>
-                        Boynadji facilite la gestion des activités et services de la famille à travers une plateforme centralisée et accessible.
+                        BACOUM HOLDING facilite la gestion des activités et services de la famille à travers une plateforme centralisée et accessible.
                         <span className="banner-icon">✦</span>
                     </div>
                 </div>
