@@ -43,8 +43,8 @@
               "hasOpenThreats": false,
               "crossingFlows": [
                 "18bf00f9-6e88-4f90-9a34-a3c759caf3ce",
-                "0a9f2a43-36a1-493d-8562-221f9a8d5b8f",
-                "e43682e5-4d43-4e90-ac07-c0b9729fdda5"
+                "e43682e5-4d43-4e90-ac07-c0b9729fdda5",
+                "0a9f2a43-36a1-493d-8562-221f9a8d5b8f"
               ],
               "containedElements": [
                 "255470c5-24a3-4073-9939-986338bf6ba9",
@@ -325,7 +325,7 @@
           {
             "position": {
               "x": 467.5,
-              "y": 375.00000000000057
+              "y": 425.00000000000057
             },
             "size": {
               "width": 80,
@@ -336,8 +336,8 @@
                 "text": "API Backend\n(Node.js / Express)"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -434,12 +434,60 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "69cb3f1f-cf70-46ab-8568-fb041af4df2b",
+                  "title": "Spoofing - Vol de JWT",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Usurpation d'identité",
+                  "description": "Un attaquant utilise un jeton JWT volé pour usurper l'identité d'un utilisateur.",
+                  "mitigation": "JWT HttpOnly, HTTPS et expiration des jetons.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "40013f42-1c91-4efa-a79c-cf6094e69c82",
+                  "title": "Information Disclosure - Stack Trace",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Divulgation d'information",
+                  "description": "Les messages d'erreur révèlent des informations sensibles (stack trace, SQL)",
+                  "mitigation": "Afficher un message générique et enregistrer les détails uniquement dans les logs.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "c8981ff5-6e3b-4b3e-877c-c3c61127d182",
+                  "title": "Elevation of Privilege - IDOR",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Élévation de privilège",
+                  "description": "Un utilisateur peut accéder aux commandes d'un autre en modifiant l'identifiant",
+                  "mitigation": "Vérifier que user_id correspond à l'utilisateur authentifié avant de retourner les données.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -741,7 +789,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -762,13 +811,45 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
+              "threats": [
+                {
+                  "id": "0eda555f-1cbe-41dc-aae0-f81657893b7c",
+                  "title": "Tampering - Modification du prix",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Falsification",
+                  "description": "Le client peut modifier le prix d'un produit avant l'envoi de la commande.",
+                  "mitigation": "Toujours récupérer le prix depuis PostgreSQL côté serveur.ce",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "fa8d2637-3186-468d-a118-7a9df7734056",
+                  "title": "Nouvelle menace STRIDE",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Divulgation d'information",
+                  "description": "Fournissez une description de cette menace",
+                  "mitigation": "Fournir des mesures de mitigation ou de prévention pour cette menace",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "API REST\nPOST /login\nGET /products\nPOST /orders"
@@ -784,8 +865,70 @@
             },
             "vertices": [
               {
+                "x": 507.5,
+                "y": 330
+              },
+              {
                 "x": 510,
                 "y": 360
+              },
+              {
+                "x": 510,
+                "y": 390
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Lecture/Ecriture données",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "50cfbdab-8498-4da4-91f3-65a03d40f125"
+              ]
+            },
+            "labels": [
+              "Lecture/Ecriture données"
+            ],
+            "id": "e43682e5-4d43-4e90-ac07-c0b9729fdda5",
+            "source": {
+              "x": 480,
+              "y": 440
+            },
+            "target": {
+              "cell": "d11d22ab-ba61-4bf8-8358-1a719b127401",
+              "port": "db612be7-73cb-4fbd-843a-81753f0d8ce2"
+            },
+            "vertices": [
+              {
+                "x": 350,
+                "y": 560
               }
             ]
           },
@@ -843,65 +986,15 @@
                 "y": 440
               },
               {
+                "x": 670,
+                "y": 510
+              },
+              {
                 "x": 810,
                 "y": 530
               },
               {
                 "x": 860,
-                "y": 560
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Lecture/Ecriture données",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "50cfbdab-8498-4da4-91f3-65a03d40f125"
-              ]
-            },
-            "labels": [
-              "Lecture/Ecriture données"
-            ],
-            "id": "e43682e5-4d43-4e90-ac07-c0b9729fdda5",
-            "source": {
-              "x": 480,
-              "y": 440
-            },
-            "target": {
-              "cell": "d11d22ab-ba61-4bf8-8358-1a719b127401",
-              "port": "db612be7-73cb-4fbd-843a-81753f0d8ce2"
-            },
-            "vertices": [
-              {
-                "x": 350,
                 "y": 560
               }
             ]
@@ -911,6 +1004,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 6
   }
 }
