@@ -829,19 +829,6 @@
                   "new": false,
                   "number": 2,
                   "score": ""
-                },
-                {
-                  "id": "fa8d2637-3186-468d-a118-7a9df7734056",
-                  "title": "Nouvelle menace STRIDE",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Divulgation d'information",
-                  "description": "Fournissez une description de cette menace",
-                  "mitigation": "Fournir des mesures de mitigation ou de prévention pour cette menace",
-                  "modelType": "STRIDE",
-                  "new": true,
-                  "number": 5,
-                  "score": ""
                 }
               ],
               "trustBoundaryIds": [],
