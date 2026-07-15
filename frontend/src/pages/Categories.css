@@ -1,0 +1,109 @@
+.categories-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.categories-container h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.categories-container form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.categories-container input {
+    width: 350px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.categories-container input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+.categories-container form button {
+    padding: 12px 25px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.categories-container form button:hover {
+    background: #0056b3;
+}
+
+.categories-container table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.categories-container thead {
+    background: #007bff;
+    color: white;
+}
+
+.categories-container th,
+.categories-container td {
+    padding: 15px;
+    text-align: center;
+}
+
+.categories-container tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.categories-container tbody tr:hover {
+    background: #eaf4ff;
+}
+
+.categories-container td button {
+    margin: 0 5px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.categories-container td button:first-child {
+    background: #ffc107;
+    color: #000;
+}
+
+.categories-container td button:first-child:hover {
+    background: #e0a800;
+}
+
+.categories-container td button:last-child {
+    background: #dc3545;
+    color: white;
+}
+
+.categories-container td button:last-child:hover {
+    background: #b52a37;
+}

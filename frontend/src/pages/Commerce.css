@@ -1,0 +1,236 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.commerce-container{
+    min-height:100vh;
+    background:#f4f6f9;
+    padding:30px;
+    font-family:inherit;
+}
+
+/* HEADER */
+
+.commerce-container h1{
+    color:#1f2937;
+    margin-bottom:25px;
+}
+
+/* Toggle "Ajouter un produit" button */
+
+.commerce-container > button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    margin-bottom:25px;
+    transition:.3s;
+}
+
+.commerce-container > button:hover{
+    background:#1d4ed8;
+}
+
+/* SECTION LABEL */
+
+.commerce-container h2{
+    color:#1f2937;
+    margin:20px 0;
+}
+
+/* FORM */
+
+.commerce-container form{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:25px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    max-width:520px;
+    display:flex;
+    flex-direction:column;
+}
+
+.commerce-container form input,
+.commerce-container form textarea,
+.commerce-container form select{
+    width:100%;
+    padding:12px;
+    margin-bottom:10px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+    color:#1f2937;
+}
+
+.commerce-container form textarea{
+    min-height:90px;
+    resize:vertical;
+}
+
+.commerce-container form input[type="file"]{
+    border:1px dashed #ccc;
+    padding:10px;
+    background:#fafafa;
+}
+
+.commerce-container form button[type="submit"]{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:8px;
+    width:100%;
+    cursor:pointer;
+    font-weight:bold;
+    margin-top:5px;
+    transition:.3s;
+}
+
+.commerce-container form button[type="submit"]:hover{
+    background:#1d4ed8;
+}
+
+/* PRODUCTS GRID */
+
+.products-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:25px;
+}
+
+.product-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 6px 20px rgba(0,0,0,.1);
+    transition:.3s;
+    display:flex;
+    flex-direction:column;
+}
+
+.product-card:hover{
+    transform:translateY(-5px);
+}
+
+.product-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    display:block;
+}
+
+.product-card h3{
+    font-size:20px;
+    margin:16px 20px 6px;
+    color:#1f2937;
+}
+
+.product-card p{
+    margin:0 20px 6px;
+    color:#4b5563;
+    font-size:14px;
+}
+
+.product-card p:first-of-type{
+    color:#2563eb;
+    font-weight:bold;
+    font-size:16px;
+}
+
+/* Edit / Delete buttons */
+
+.product-card > div{
+    margin:15px 20px 20px;
+    display:flex;
+    gap:10px;
+}
+
+.product-card button:nth-of-type(1){
+    flex:1;
+    background:#f59e0b;
+    border:none;
+    color:white;
+    padding:10px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.product-card button:nth-of-type(1):hover{
+    background:#d97706;
+}
+
+.product-card button:nth-of-type(2){
+    flex:1;
+    background:#ef4444;
+    border:none;
+    color:white;
+    padding:10px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.product-card button:nth-of-type(2):hover{
+    background:#dc2626;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px){
+    .products-list{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media (max-width:560px){
+    .products-list{
+        grid-template-columns:1fr;
+    }
+
+    .commerce-container{
+        padding:20px;
+    }
+}
+
+.commerce-actions {
+    display: flex;
+      justify-content: center; /* Centre horizontalement */
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.commerce-actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.commerce-actions button:first-child {
+    background-color: #007bff;
+    color: white;
+}
+
+.commerce-actions button:first-child:hover {
+    background-color: #0056b3;
+}
+
+.commerce-actions button:last-child {
+    background-color: #28a745;
+    color: white;
+}
+
+.commerce-actions button:last-child:hover {
+    background-color: #218838;
+}
