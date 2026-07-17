@@ -207,6 +207,26 @@ function Commerce() {
     };
 
 
+    const addToCart = (product) => {
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const index = cart.findIndex(item => item._id === product._id);
+
+    if (index !== -1) {
+        cart[index].quantitePanier += 1;
+    } else {
+        cart.push({
+            ...product,
+            quantitePanier: 1
+        });
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert("Produit ajouté au panier !");
+};
+
 
 
     return (
@@ -225,6 +245,16 @@ function Commerce() {
         Catégories
     </button>
 
+    <button onClick={() => navigate("/panier")}>
+    🛒 Panier
+</button>
+<button onClick={() => navigate("/historique-factures")}>
+    📚 Historique
+</button>
+<button onClick={() => navigate("/tableau-bord")}>
+    📊 Tableau de bord
+</button>
+     
 </div>
 
 
@@ -409,19 +439,21 @@ function Commerce() {
 
 
 
-                        <button onClick={() => handleEdit(product)}>
+     <div className="product-actions">
 
-                            Modifier
+    <button onClick={() => handleEdit(product)}>
+        Modifier
+    </button>
 
-                        </button>
+    <button onClick={() => handleDelete(product._id)}>
+        Supprimer
+    </button>
 
+    <button onClick={() => addToCart(product)}>
+        🛒 Ajouter au panier
+    </button>
 
-
-                        <button onClick={() => handleDelete(product._id)}>
-
-                            Supprimer
-
-                        </button>
+</div>
 
 
 

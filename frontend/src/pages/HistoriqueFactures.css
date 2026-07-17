@@ -1,0 +1,56 @@
+.historique-container{
+
+    width:90%;
+    margin:40px auto;
+
+}
+
+.historique-container h1{
+
+    text-align:center;
+    margin-bottom:30px;
+    color:#0d6efd;
+
+}
+
+.historique-container table{
+
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.historique-container th,
+.historique-container td{
+
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:center;
+
+}
+
+.historique-container th{
+
+    background:#0d6efd;
+    color:white;
+
+}
+
+.historique-container button{
+
+    background:#198754;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:5px;
+    cursor:pointer;
+
+}
+
+.historique-container button:hover{
+
+    background:#157347;
+
+}

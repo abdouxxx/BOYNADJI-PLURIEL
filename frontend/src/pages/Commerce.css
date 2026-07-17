@@ -234,3 +234,17 @@
 .commerce-actions button:last-child:hover {
     background-color: #218838;
 }
+
+.product-actions{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:15px;
+}
+
+.product-actions button{
+    padding:10px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}

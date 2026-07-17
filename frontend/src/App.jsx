@@ -6,6 +6,10 @@ import Dashboard from "./pages/Dashboard";
 import Transport from "./pages/transport";
 import Commerce from "./pages/Commerce";
 import Categories from "./pages/Categories";
+import Panier from "./pages/Panier";
+import Facture from "./pages/Facture";
+import HistoriqueFactures from "./pages/HistoriqueFactures";
+import TableauDeBord from "./pages/TableauDeBord";
 
 function App() {
   return (
@@ -46,16 +50,29 @@ function App() {
         />
 
         <Route
-  path="/categories"
-  element={
-    <ProtectedRoute>
-      <Categories />
-    </ProtectedRoute>
-  }
+            path="/categories"
+            element={
+            <ProtectedRoute>
+             <Categories />
+               </ProtectedRoute>
+                }
+/>
+    <Route path="/panier" element={<Panier />} />
+    <Route
+    path="/facture"
+    element={<Facture />}
 />
 
+<Route
+    path="/historique-factures"
+    element={<HistoriqueFactures />}
+/>
+
+<Route path="/tableau-bord" element={<TableauDeBord />} />
 
       </Routes>
+
+  
 
     </BrowserRouter>
   );
