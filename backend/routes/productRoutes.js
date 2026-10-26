@@ -6,6 +6,7 @@ const upload = require("../middleware/upload");
 const {
   createProduct,
   getProducts,
+  getProductById,
   updateProduct,
   deleteProduct,
 } = require("../controllers/productController");
@@ -15,6 +16,9 @@ router.post("/", upload.single("image"), createProduct);
 
 // Afficher tous les produits
 router.get("/", getProducts);
+
+// Afficher un seul produit
+router.get("/:id", getProductById);
 
 // Modifier un produit
 router.put("/:id", upload.single("image"), updateProduct);

@@ -10,6 +10,8 @@ import Panier from "./pages/Panier";
 import Facture from "./pages/Facture";
 import HistoriqueFactures from "./pages/HistoriqueFactures";
 import TableauDeBord from "./pages/TableauDeBord";
+import ProductDetails from "./pages/ProductDetails";
+
 
 function App() {
   return (
@@ -69,6 +71,11 @@ function App() {
 />
 
 <Route path="/tableau-bord" element={<TableauDeBord />} />
+
+<Route
+    path="/produit/:id"
+    element={<ProductDetails />}
+/>
 
       </Routes>
 

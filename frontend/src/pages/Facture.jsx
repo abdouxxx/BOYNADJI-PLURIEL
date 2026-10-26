@@ -97,7 +97,7 @@ function Facture() {
           </p>
 
         <p className="telephone">
-       Tél : +221 XX XXX XX XX
+       Tél : +221 76 694 42 13 / +221 70 654 33 24
       </p>
 
 

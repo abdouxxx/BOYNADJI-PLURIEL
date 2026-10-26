@@ -232,6 +232,11 @@ function Commerce() {
     return (
 
         <div className="commerce-container">
+          <button
+            className="back-btn"
+            onClick={() => navigate("/Dashboard")} >
+            ← Retour
+ </button>
 
 
             <h1>Gestion Commerce</h1>
@@ -254,6 +259,8 @@ function Commerce() {
 <button onClick={() => navigate("/tableau-bord")}>
     📊 Tableau de bord
 </button>
+
+
      
 </div>
 
@@ -403,7 +410,11 @@ function Commerce() {
                 {products.map(product => (
 
 
-                    <div className="product-card" key={product._id}>
+                   <div
+                className="product-card"
+                key={product._id}
+                   onClick={() => navigate(`/produit/${product._id}`)}
+                    >
 
 
                         {product.image && (
@@ -441,17 +452,32 @@ function Commerce() {
 
      <div className="product-actions">
 
-    <button onClick={() => handleEdit(product)}>
-        Modifier
-    </button>
+        <button
+    onClick={(e) => {
+        e.stopPropagation();
+        handleEdit(product);
+    }}
+>
+    Modifier
+   </button>
 
-    <button onClick={() => handleDelete(product._id)}>
-        Supprimer
-    </button>
+      <button
+    onClick={(e) => {
+        e.stopPropagation();
+        handleDelete(product._id);
+    }}
+   >
+    Supprimer
+</button>
 
-    <button onClick={() => addToCart(product)}>
-        🛒 Ajouter au panier
-    </button>
+      <button
+    onClick={(e) => {
+        e.stopPropagation();
+        addToCart(product);
+    }}
+    >
+    🛒 Ajouter au panier
+</button>
 
 </div>
 

@@ -102,3 +102,27 @@ exports.deleteProduct = async (req, res) => {
     });
   }
 };
+
+// Afficher un seul produit
+exports.getProductById = async (req, res) => {
+  try {
+
+    const product = await Product.findById(req.params.id)
+      .populate("categorie", "nom");
+
+    if (!product) {
+      return res.status(404).json({
+        message: "Produit introuvable.",
+      });
+    }
+
+    res.json(product);
+
+  } catch (error) {
+
+    res.status(500).json({
+      message: error.message,
+    });
+
+  }
+};

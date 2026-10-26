@@ -53,3 +53,14 @@ export const deleteProduct = async (id) => {
 
     return response.data;
 };
+
+// récupérer un produit par son id
+export const getProductById = async (id) => {
+
+    const response = await axios.get(
+        `${API_URL}/${id}`
+    );
+
+    return response.data;
+
+};
