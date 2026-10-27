@@ -1,0 +1,44 @@
+diff --git a/frontend/src/pages/components/ServiceCard.jsx b/frontend/src/pages/components/ServiceCard.jsx
+index e796017..e69de29 100644
+--- a/frontend/src/pages/components/ServiceCard.jsx
++++ b/frontend/src/pages/components/ServiceCard.jsx
+@@ -1,27 +0,0 @@
+-import { Link } from "react-router-dom";
+-
+-function ServiceCard({ image, title, route }) {
+-
+-  return (
+-    <div className="card p-3 text-center">
+-
+-      <img
+-        src={image}
+-        alt={title}
+-        height="150"
+-      />
+-
+-      <h4>{title}</h4>
+-
+-      <Link
+-        className="btn btn-secondary"
+-        to={route}
+-      >
+-        Accéder
+-      </Link>
+-
+-    </div>
+-  );
+-}
+-
+-export default ServiceCard;
+\ No newline at end of file
+diff --git a/frontend/src/pages/transport.jsx b/frontend/src/pages/transport.jsx
+index 6f941ee..ad9f849 100644
+--- a/frontend/src/pages/transport.jsx
++++ b/frontend/src/pages/transport.jsx
+@@ -420,4 +420,4 @@ const deleteVehicle = async (id) => {
+     );
+ }
+ 
+-export default Transport;
+\ No newline at end of file
++export default Transport;
